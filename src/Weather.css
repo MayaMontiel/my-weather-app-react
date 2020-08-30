@@ -28,39 +28,32 @@
 }
 
 .Weather .hourlyForecast {
-  
   margin-bottom: 20px;
   margin-left: 15px;
- 
- 
 }
 
-.Weather .one{
- 
+.Weather .hourly li {
   text-align: center;
-  margin: 0 10px;
-  
+ margin-left: 10px;
+ margin-right: 40rem;
 }
 
-.Weather .two{
-  
-  text-align: center;
-  margin: 0 20px;
-}  
 
-.Weather .three{
- 
-  text-align: center;
-  margin: 0 10px;
+
+.Weather .dailyForecast {
+  margin-bottom: 20px;
+  margin-left: 15px;
 }
-.Weather .four{
+
+.Weather .daily li{
   
   text-align: center;
-  margin: 0 20px;
+  margin: 0 10px 0 -10px;
 }
-.Weather .five{
-  
+
+.Weather .daily li.unit{
+  font-size: 13px;
   text-align: center;
-  margin: 0 15px;
+  
 }
 

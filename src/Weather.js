@@ -84,8 +84,64 @@ export default function Weather() {
         <small>Hourly</small>
         <hr />
 
-        <div className="row">
-          <div className="one">
+        <div className="hourly">
+          <div className="row">
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+
             <div className="col-2">
               <ul>
                 <li>
@@ -100,67 +156,71 @@ export default function Weather() {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className="two">
+      <div className="dailyForecast">
+        <small>Daily</small>
+        <hr />
+        <div className="daily">
+          <div className="row">
             <div className="col-2">
               <ul>
+                <li>Sun</li>
                 <li>
-                  <span>10:00</span>
+                  <i className="fas fa-sun" />
                 </li>
-                <li>
-                  <i className="fas fa-sun"></i>
-                </li>
-                <li>
-                  <span>26°C</span>
-                </li>
+                <li className="unit">26°C/26°C</li>
               </ul>
             </div>
-          </div>
 
-          <div className="three">
             <div className="col-2">
               <ul>
+                <li>Mon</li>
                 <li>
-                  <span>10:00</span>
+                  <i className="fas fa-sun" />
                 </li>
-                <li>
-                  <i className="fas fa-sun"></i>
-                </li>
-                <li>
-                  <span>26°C</span>
-                </li>
+                <li className="unit">26°C/26°C</li>
               </ul>
             </div>
-          </div>
 
-          <div className="four">
             <div className="col-2">
               <ul>
+                <li>Tues</li>
                 <li>
-                  <span>10:00</span>
+                  <i className="fas fa-sun" />
                 </li>
-                <li>
-                  <i className="fas fa-sun"></i>
-                </li>
-                <li>
-                  <span>26°C</span>
-                </li>
+                <li className="unit">26°C/26°C</li>
               </ul>
             </div>
-          </div>
 
-          <div className="five">
             <div className="col-2">
               <ul>
+                <li>Wed</li>
                 <li>
-                  <span>10:00</span>
+                  <i className="fas fa-sun" />
                 </li>
+                <li className="unit">26°C/26°C</li>
+              </ul>
+            </div>
+
+            <div className="col-2">
+              <ul>
+                <li>Thu</li>
                 <li>
-                  <i className="fas fa-sun"></i>
+                  <i className="fas fa-sun" />
                 </li>
+                <li className="unit">26°C/26°C</li>
+              </ul>
+            </div>
+
+            <div className="col-2">
+              <ul>
+                <li>Fri</li>
                 <li>
-                  <span>26°C</span>
+                  <i className="fas fa-sun" />
                 </li>
+                <li className="unit">26°C/26°C</li>
               </ul>
             </div>
           </div>
