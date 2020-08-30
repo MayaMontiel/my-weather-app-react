@@ -25,7 +25,8 @@ export default function App() {
         </div>
       </div>
       <div className="Footer">
-        <small>Open-source code by Maya Montiel</small>
+        <small><a href= "https://github.com/MayaMontiel/my-weather-app-react" target="_blank">
+          Open-source code</a>  by Maya Montiel</small>
       </div>
     </div>
   );
