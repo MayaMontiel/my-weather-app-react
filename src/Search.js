@@ -2,17 +2,17 @@ import React, { useState } from "react";
 
 
 export default function Search() {
-    const [search, setSearch] = useState("");
+    const [city, setCity] = useState("");
 
     function handleSubmit(event) {
         event.preventDefault();
-        if (search.lenght > 0) {
+        if (city.lenght > 0) {
             alert("Enter a city");
         }
     }
 
-    function updateSearch(event) {
-        setSearch(event.target.value);
+    function updateCity(event) {
+        setCity(event.target.value);
     }
 
     return (
@@ -23,7 +23,7 @@ export default function Search() {
                 className="form-control form-control-sm mb-2 mr-2 col-9"
                 placeholder="Enter City"
                 autoFocus="on"
-                onChange={updateSearch}
+                onChange={updateCity}
             />
             <button type="submit" className="btn btn-primary btn-sm mb-2 ml-2">
                 <i className="fas fa-search"></i>
