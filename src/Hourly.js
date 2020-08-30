@@ -1,5 +1,5 @@
 import React from "react";
-//import "./Hourly.css";
+
 
 export default function Hourly() {
     return (

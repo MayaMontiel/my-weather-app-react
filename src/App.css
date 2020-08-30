@@ -16,4 +16,13 @@
   font-size: 25px;
 }
 
+.Hourly {
+  text-align: center;
+  margin: 0 15px;
+}
+
+.Hourly i {
+  position: relative;
+  left: 10px;
+}
 
