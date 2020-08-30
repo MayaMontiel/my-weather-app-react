@@ -1,6 +1,6 @@
 .Weather ul {
   list-style: none;
-  padding-left: 0px;
+  padding-left: 10px;
 }
 
 .Weather ul li h2 {
@@ -26,3 +26,41 @@
 .Weather a {
   color: black;
 }
+
+.Weather .hourlyForecast {
+  
+  margin-bottom: 20px;
+  margin-left: 15px;
+ 
+ 
+}
+
+.Weather .one{
+ 
+  text-align: center;
+  margin: 0 10px;
+  
+}
+
+.Weather .two{
+  
+  text-align: center;
+  margin: 0 20px;
+}  
+
+.Weather .three{
+ 
+  text-align: center;
+  margin: 0 10px;
+}
+.Weather .four{
+  
+  text-align: center;
+  margin: 0 20px;
+}
+.Weather .five{
+  
+  text-align: center;
+  margin: 0 15px;
+}
+

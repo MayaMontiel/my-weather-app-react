@@ -79,6 +79,93 @@ export default function Weather() {
           <li>PoP : {weatherData.pop}%</li>
         </ul>
       </div>
+
+      <div className="hourlyForecast">
+        <small>Hourly</small>
+        <hr />
+
+        <div className="row">
+          <div className="one">
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="two">
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="three">
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="four">
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="five">
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
