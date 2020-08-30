@@ -1,0 +1,28 @@
+.Weather ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.Weather ul li h2 {
+  font-size: 50px;
+}
+.Weather ul li .units {
+  position: relative;
+  right: -50px;
+  top: -60px;
+}
+
+.Weather .wind {
+  margin-top: 10px;
+  margin-right: -40px;
+  padding-left: 10px;
+}
+
+.Weather .li-units {
+  position: relative;
+  top: -20px;
+}
+
+.Weather a {
+  color: black;
+}
