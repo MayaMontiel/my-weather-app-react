@@ -32,10 +32,9 @@
   margin-left: 15px;
 }
 
-.Weather .hourly li {
-  text-align: center;
+.Weather .hourly li {  
  margin-left: 10px;
- margin-right: 40rem;
+ margin-right: 40px;
 }
 
 

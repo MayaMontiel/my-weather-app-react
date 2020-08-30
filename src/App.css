@@ -4,11 +4,7 @@
   max-width: 600px;
 }
 
-.Daily ul {
-  list-style: none;
-  margin: 0 6px;
-  padding: 0;
-}
+
 
 .Container button {
   background: transparent;
@@ -16,14 +12,6 @@
   font-size: 25px;
 }
 
-.Hourly {
- 
-  text-align: center;
-  margin: 0 15px;
-}
 
-.Hourly i {
-  position: relative;
-  left: 10px;
-}
+
 
