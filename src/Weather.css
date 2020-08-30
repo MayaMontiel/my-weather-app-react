@@ -32,27 +32,22 @@
   margin-left: 15px;
 }
 
-.Weather .hourly li {  
- margin-left: 10px;
- margin-right: 40px;
+.Weather .hourly li {
+  text-align: center;
+  margin: 0 50px 0 10px;
 }
-
-
 
 .Weather .dailyForecast {
   margin-bottom: 20px;
   margin-left: 15px;
 }
 
-.Weather .daily li{
-  
+.Weather .daily li {
   text-align: center;
   margin: 0 10px 0 -10px;
 }
 
-.Weather .daily li.unit{
+.Weather .daily li.unit {
   font-size: 13px;
   text-align: center;
-  
 }
-

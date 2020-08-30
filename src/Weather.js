@@ -155,6 +155,20 @@ export default function Weather() {
                 </li>
               </ul>
             </div>
+
+            <div className="col-2">
+              <ul>
+                <li>
+                  <span>10:00</span>
+                </li>
+                <li>
+                  <i className="fas fa-sun"></i>
+                </li>
+                <li>
+                  <span>26°C</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
