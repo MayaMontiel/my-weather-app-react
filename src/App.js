@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "./Search";
+
 import Weather from "./Weather";
 import HourlyForecast from "./HourlyForecast";
 import DailyForecast from "./DailyForecast";
@@ -11,9 +11,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="Container">
-        <div className="Search">
-          <Search />
-        </div>
+        
         <div className="Weather">
           <Weather />
         </div>
