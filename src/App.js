@@ -1,9 +1,7 @@
 import React from "react";
-
 import Weather from "./Weather";
 
 import "./App.css";
-import "./Container.css";
 
 export default function App() {
   return (
@@ -15,14 +13,15 @@ export default function App() {
       </div>
       <div className="Footer">
         <small>
+          Coded by Maya Montiel and is
+          {" "}
           <a
             href="https://github.com/MayaMontiel/my-weather-app-react"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Open-source code
+            Open-source code on GitHub.
           </a>{" "}
-          by Maya Montiel
         </small>
       </div>
     </div>
