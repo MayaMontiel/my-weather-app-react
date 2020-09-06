@@ -5,20 +5,21 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   
+  
 
   function showData(response) {
     setWeatherData({
       ready: true,
-      city: "Toronto",
+      city: response.data.name,
       time: "9:30 PM",
       date: "Sat.,Aug 15",
-      description: "Sunny",
-      currentTemperature: "26",
+      description: response.data.weather[0].description,
+      currentTemperature: Math.round(response.data.main.temp),
       maxTemp: 30,
       minTemp: 25,
       realFeel: 30,
-      wind: 10,
-      humidity: 40,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
       uvIndex: 2,
       pop: 2,
     });
@@ -56,11 +57,11 @@ export default function Weather(props) {
               <h1>{weatherData.city}</h1>
             </li>
             <li>
-              {weatherData.time}
+              11:57
               <br />
-              {weatherData.date}
+              Sept. 06
             </li>
-            <li>{weatherData.description}</li>
+            <li className = "text-capitalize">{weatherData.description}</li>
           </ul>
         </div>
 
@@ -75,10 +76,10 @@ export default function Weather(props) {
             <div className="li-units">
               <li>
                 <span>
-                  {weatherData.maxTemp} °/{weatherData.minTemp}°
+                  30 °C/20°C
                 </span>
               </li>
-              <li>Real Feel {weatherData.realFeel}°</li>
+              <li>Real Feel 20 C°</li>
             </div>
           </ul>
         </div>
