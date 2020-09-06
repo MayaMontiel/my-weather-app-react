@@ -26,16 +26,19 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
+      <div className="search">
+        <form >
       <div className="row">
-        <div className="col-12">
-          <div className="search">
-            <form className="form-inline">
+        <div className="col-9">
+          
+            
               <input
                 type="search"
-                className="form-control form-control-sm mb-2 mr-2 col-9"
+                className="form-control"
                 placeholder="Enter City"
                 autoFocus="on"
               />
+              </div>
               <button
                 type="submit"
                 className="btn btn-primary btn-sm mb-2 ml-2"
@@ -46,12 +49,13 @@ export default function Weather(props) {
               <button className="btn btn-primary btn-sm mb-2 ml-2">
                 <i className="fas fa-map-marked-alt"></i>
               </button>
-            </form>
-            </div>
+            
+            
         </div>
+</form>
 
-
-           
+           <div className = "Weather">
+             <div className = "row">
         <div className="col-5">
           <ul>
             <li>
@@ -90,7 +94,9 @@ export default function Weather(props) {
             <li>Uv Index : {weatherData.uvIndex}</li>
             <li>PoP : {weatherData.pop}%</li>
           </ul>
-        </div>        
+        </div> 
+          </div>
+        </div>       
 
         <div className="hourlyForecast">
           <small>Hourly</small>
