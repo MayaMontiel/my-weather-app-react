@@ -1,7 +1,13 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+const apiKey = "41aceac11e2a0f0cd5ef824bcdca730e";
+let city = "Toronto";
+let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showTemperature);
+
   let weatherData = {
     city: "Toronto",
     time: "9:30 PM",
