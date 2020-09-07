@@ -15,6 +15,7 @@ const [city, setCity] = useState(props.defaultCity);
       city: response.data.name,      
       date: new Date(response.data.dt*1000),
       description: response.data.weather[0].description,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       currentTemperature: Math.round(response.data.main.temp),
       maxTemp: 30,
       minTemp: 25,
@@ -23,6 +24,7 @@ const [city, setCity] = useState(props.defaultCity);
       humidity: response.data.main.humidity,
       uvIndex: 2,
       pop: 2,
+
     });
   }
 
