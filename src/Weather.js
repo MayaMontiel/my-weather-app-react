@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
 import "./Weather.css";
@@ -53,48 +54,8 @@ export default function Weather() {
             
         </div>
 </form>
-
-           <div className = "Weather">
-             <div className = "row">
-        <div className="col-5">
-          <ul>
-            <li>
-              <h1>{weatherData.city}</h1>
-            </li>
-            <li>       
-              <FormattedDate date= {weatherData.date} />
-            </li>
-            <li className="text-capitalize">{weatherData.description}</li>
-          </ul>
-        </div>
-
-        <div className="col-3">
-          <ul>
-            <li>
-              <h2>{weatherData.currentTemperature}</h2>
-              <small className="units">
-                <a href="/">°C</a> | <a href="/">°F</a>
-              </small>
-            </li>
-            <div className="li-units">
-              <li>
-                <span>30 °C/20°C</span>
-              </li>
-              <li>Real Feel 20 C°</li>
-            </div>
-          </ul>
-        </div>
-
-        <div className="col-3">
-          <ul className="wind">
-            <li>Wind : {weatherData.wind} km/h</li>
-            <li>Humidity : {weatherData.humidity}%</li>
-            <li>Uv Index : {weatherData.uvIndex}</li>
-            <li>PoP : {weatherData.pop}%</li>
-          </ul>
-        </div> 
-          </div>
-        </div>       
+<WeatherInfo data = {weatherData} />
+           
 
         <div className="hourlyForecast">
           <small>Hourly</small>
