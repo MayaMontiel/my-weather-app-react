@@ -3,20 +3,21 @@
   padding-left: 10px;
 }
 
+.Weather ul li h1 {
+  margin-top: 10px;
+  font-size: 35px;
+}
+
 .Weather ul li h2 {
   font-size: 50px;
 }
 .Weather ul li .units {
   position: relative;
-  right: -58px;
+  right: -110px;
   top: -60px;
 }
 
-.Weather .wind {
-  margin-top: 10px;
-  margin-right: -40px;
-  padding-left: 10px;
-}
+
 
 .Weather .li-units {
   position: relative;
@@ -52,3 +53,20 @@
   text-align: center;
 }
 
+.Weather canvas{
+  height: 50px;
+  width:50px; 
+}
+
+.Weather .col-3{
+  margin-top: 10px;
+  margin-left: -30px;
+}
+.Weather .wind{
+  border: solid;
+  font-size: 15px;
+  padding: 0;
+  margin-left: 70px;
+  margin-right: -90px;
+margin-top: 20px;
+}
