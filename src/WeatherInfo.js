@@ -4,6 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 
 
 export default function WeatherInfo(props) {
+    //console.log(props.data)
   return (
     <div className="Weather">
       <div className="row">
@@ -32,9 +33,11 @@ export default function WeatherInfo(props) {
             </li>
             <div className="li-units">
               <li>
-                <span>30 °C/20°C</span>
+                <span>
+                  {props.data.maxTemp}°C/{props.data.minTemp}°C
+                </span>
               </li>
-              <li>Real Feel 20 C°</li>
+              <li>Real Feel {props.data.realFeel} C°</li>
             </div>
           </ul>
         </div>
@@ -43,8 +46,8 @@ export default function WeatherInfo(props) {
           <ul className="wind">
             <li>Wind : {props.data.wind} km/h</li>
             <li>Humidity : {props.data.humidity}%</li>
-            <li>Uv Index : </li>
-            <li>PoP : %</li>
+            <li>Uv Index : {props.data.uvIndex}</li>
+            <li>PoP : {props.data.pop}%</li>
           </ul>
         </div>
       </div>
