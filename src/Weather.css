@@ -17,8 +17,6 @@
   top: -60px;
 }
 
-
-
 .Weather .li-units {
   position: relative;
   top: -20px;
@@ -53,24 +51,25 @@
   text-align: center;
 }
 
-.Weather canvas{
-  height: 45px;
-  width:45px; 
+.Weather canvas {
+  margin-top: 10px;
+  height: 70px;
+  width: 70px;
 }
 
-.Weather .col-3{
+.Weather .col-3 {
   margin-top: 10px;
   margin-left: -30px;
 }
-.Weather .wind{
-  
+.Weather .wind {
   font-size: 15px;
   padding: 0;
   margin-left: 70px;
   margin-right: -90px;
-margin-top: 20px;
+  margin-top: 20px;
 }
 
-.Weather .WeatherTemp h1{
+.Weather .WeatherTemp h1 {
   font-size: 60px;
 }
+
