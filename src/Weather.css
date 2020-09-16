@@ -70,3 +70,7 @@
   margin-right: -90px;
 margin-top: 20px;
 }
+
+.Weather .WeatherTemp h1{
+  font-size: 60px;
+}
