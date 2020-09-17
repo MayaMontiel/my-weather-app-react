@@ -8,13 +8,13 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-const [city, setCity] = useState(props.defaultCity);
+  const [city, setCity] = useState(props.defaultCity);
 
   function showData(response) {
     setWeatherData({
       ready: true,
-      city: response.data.name,      
-      date: new Date(response.data.dt*1000),
+      city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       currentTemperature: Math.round(response.data.main.temp),
@@ -25,25 +25,24 @@ const [city, setCity] = useState(props.defaultCity);
       humidity: response.data.main.humidity,
       uvIndex: 2,
       pop: 2,
-
     });
   }
 
-  function search(){
+  function search() {
     const apiKey = "41aceac11e2a0f0cd5ef824bcdca730e";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showData);
   }
 
-  function handleSubmit(event){
+  function handleSubmit(event) {
     event.preventDefault();
-  search();
+    search();
   }
 
-  function updatedCity(event){
-  event.preventDefault();
-  setCity(event.target.value);
-}
+  function updatedCity(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+  }
   if (weatherData.ready) {
     return (
       <div className="search">
@@ -71,7 +70,7 @@ const [city, setCity] = useState(props.defaultCity);
 
         <small>Hourly</small>
         <br />
-        <HourlyForecast city = {weatherData.city}/>
+        <HourlyForecast city={weatherData.city} />
 
         <div className="dailyForecast">
           <small>Daily</small>
@@ -87,64 +86,13 @@ const [city, setCity] = useState(props.defaultCity);
                   <li className="unit">26°C/26°C</li>
                 </ul>
               </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>Mon</li>
-                  <li>
-                    <i className="fas fa-sun" />
-                  </li>
-                  <li className="unit">26°C/26°C</li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>Tues</li>
-                  <li>
-                    <i className="fas fa-sun" />
-                  </li>
-                  <li className="unit">26°C/26°C</li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>Wed</li>
-                  <li>
-                    <i className="fas fa-sun" />
-                  </li>
-                  <li className="unit">26°C/26°C</li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>Thu</li>
-                  <li>
-                    <i className="fas fa-sun" />
-                  </li>
-                  <li className="unit">26°C/26°C</li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>Fri</li>
-                  <li>
-                    <i className="fas fa-sun" />
-                  </li>
-                  <li className="unit">26°C/26°C</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
       </div>
     );
   } else {
-    
-search();
+    search();
     return "Loading....";
   }
 }
