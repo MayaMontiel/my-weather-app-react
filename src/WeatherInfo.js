@@ -26,8 +26,7 @@ export default function WeatherInfo(props) {
 
         <div className="col-3">
           <ul>
-            <li>             
-                      
+            <li>     
               <WeatherTemp celsius={props.data.currentTemperature} />
             </li>
             <div className="li-units">

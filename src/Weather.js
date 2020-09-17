@@ -30,7 +30,7 @@ const [city, setCity] = useState(props.defaultCity);
 
   function search(){
     const apiKey = "41aceac11e2a0f0cd5ef824bcdca730e";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showData);
   }
 
