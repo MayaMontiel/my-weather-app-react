@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
+import HourlyForecast from "./HourlyForecast";
 import axios from "axios";
 
 import "./Weather.css";
@@ -46,128 +47,31 @@ const [city, setCity] = useState(props.defaultCity);
   if (weatherData.ready) {
     return (
       <div className="search">
-        <form onSubmit = {handleSubmit} >
-      <div className="row">
-        <div className="col-9">
-          
-            
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-9">
               <input
                 type="search"
                 className="form-control"
                 placeholder="Enter City"
                 autoFocus="on"
-                onChange = {updatedCity}
+                onChange={updatedCity}
               />
-              </div>
-              <button
-                type="submit"
-                className="btn btn-primary btn-sm mb-2 ml-2"
-              >
-                <i className="fas fa-search"></i>
-              </button>
-
-              <button className="btn btn-primary btn-sm mb-2 ml-2">
-                <i className="fas fa-map-marked-alt"></i>
-              </button>
-            
-            
-        </div>
-</form>
-<WeatherInfo data = {weatherData} />
-           
-
-        <div className="hourlyForecast">
-          <small>Hourly</small>
-          <hr />
-
-          <div className="hourly">
-            <div className="row">
-              <div className="col-2">
-                <ul>
-                  <li>
-                    <span>10:00</span>
-                  </li>
-                  <li>
-                    <i className="fas fa-sun"></i>
-                  </li>
-                  <li>
-                    <span>26°C</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>
-                    <span>10:00</span>
-                  </li>
-                  <li>
-                    <i className="fas fa-sun"></i>
-                  </li>
-                  <li>
-                    <span>26°C</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>
-                    <span>10:00</span>
-                  </li>
-                  <li>
-                    <i className="fas fa-sun"></i>
-                  </li>
-                  <li>
-                    <span>26°C</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>
-                    <span>10:00</span>
-                  </li>
-                  <li>
-                    <i className="fas fa-sun"></i>
-                  </li>
-                  <li>
-                    <span>26°C</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>
-                    <span>10:00</span>
-                  </li>
-                  <li>
-                    <i className="fas fa-sun"></i>
-                  </li>
-                  <li>
-                    <span>26°C</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-2">
-                <ul>
-                  <li>
-                    <span>10:00</span>
-                  </li>
-                  <li>
-                    <i className="fas fa-sun"></i>
-                  </li>
-                  <li>
-                    <span>26°C</span>
-                  </li>
-                </ul>
-              </div>
             </div>
+            <button type="submit" className="btn btn-primary btn-sm mb-2 ml-2">
+              <i className="fas fa-search"></i>
+            </button>
+
+            <button className="btn btn-primary btn-sm mb-2 ml-2">
+              <i className="fas fa-map-marked-alt"></i>
+            </button>
           </div>
-        </div>
+        </form>
+        <WeatherInfo data={weatherData} />
+
+        <small>Hourly</small>
+        <br />
+        <HourlyForecast city = {weatherData.city}/>
 
         <div className="dailyForecast">
           <small>Daily</small>
@@ -236,8 +140,7 @@ const [city, setCity] = useState(props.defaultCity);
             </div>
           </div>
         </div>
-        </div>
-      
+      </div>
     );
   } else {
     
