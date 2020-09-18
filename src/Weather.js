@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
 import HourlyForecast from "./HourlyForecast";
+
 import axios from "axios";
 
 import "./Weather.css";
@@ -71,25 +72,10 @@ export default function Weather(props) {
         <small>Hourly</small>
         <br />
         <HourlyForecast city={weatherData.city} />
-
-        <div className="dailyForecast">
-          <small>Daily</small>
-          <hr />
-          <div className="daily">
-            <div className="row">
-              <div className="col-2">
-                <ul>
-                  <li>Sun</li>
-                  <li>
-                    <i className="fas fa-sun" />
-                  </li>
-                  <li className="unit">26°C/26°C</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+       
+            
         </div>
-      </div>
+      
     );
   } else {
     search();
