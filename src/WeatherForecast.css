@@ -8,3 +8,14 @@
     
     
 }
+
+.DailyForecast{
+    text-align: center;
+}
+
+.DailyForecast canvas{
+    display: block;
+    margin: 10px auto;
+    
+    
+}

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import HourlyForecast from "./HourlyForecast";
 
+
 import axios from "axios";
 
 import "./Weather.css";
@@ -30,6 +31,7 @@ export default function Weather(props) {
       uvIndex: 2,
       pop: 2,
     });
+    
   }
 
   function search() {
@@ -91,11 +93,13 @@ export default function Weather(props) {
             </button>
           </div>
         </form>
-        <WeatherInfo data={weatherData}  />
+        <WeatherInfo data={weatherData} />
 
         <small>Hourly</small>
         <br />
-        <HourlyForecast city={weatherData.city} unit = "celsius" />
+        <HourlyForecast city={weatherData.city} unit="celsius" />
+
+        
       </div>
     );
   } else {
