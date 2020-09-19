@@ -12,6 +12,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function showData(response) {
+    console.log(response)
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -19,9 +20,9 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       currentTemperature: Math.round(response.data.main.temp),
-      maxTemp: 30,
-      minTemp: 25,
-      realFeel: 30,
+      maxTemp: Math.round(response.data.main.temp_max),
+      minTemp: Math.round(response.data.main.temp_min),
+      realFeel: Math.round(response.data.main.feels_like),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       uvIndex: 2,
@@ -38,6 +39,7 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
+    
   }
 
   function updatedCity(event) {

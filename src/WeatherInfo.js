@@ -17,27 +17,19 @@ export default function WeatherInfo(props) {
               <FormattedDate date={props.data.date} />
             </li>
             <li className="text-capitalize">{props.data.description}</li>
-            
+
             <li>
-              <WeatherIcon code={props.data.icon} /> 
+              <WeatherIcon code={props.data.icon} />
             </li>
           </ul>
         </div>
 
         <div className="col-3">
-          <ul>
-            <li>     
-              <WeatherTemp celsius={props.data.currentTemperature} />
-            </li>
-            <div className="li-units">
-              <li>
-                <span>
-                  {props.data.maxTemp}°C/{props.data.minTemp}°C
-                </span>
-              </li>
-              <li>Real Feel {props.data.realFeel} C°</li>
-            </div>
-          </ul>
+          <WeatherTemp celsius={props.data.currentTemperature}
+          maxTemperature = {props.data.maxTemp} 
+          minTemperature = {props.data.minTemp}
+          realFeelTemp = {props.data.realFeel} />
+          
         </div>
 
         <div className="col-3">
