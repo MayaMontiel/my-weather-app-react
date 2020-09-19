@@ -10,9 +10,11 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  
+  
 
   function showData(response) {
-    console.log(response)
+    //console.log(response)
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -39,6 +41,7 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
+    
     
   }
 
@@ -88,11 +91,11 @@ export default function Weather(props) {
             </button>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo data={weatherData}  />
 
         <small>Hourly</small>
         <br />
-        <HourlyForecast city={weatherData.city} />
+        <HourlyForecast city={weatherData.city} unit = "celsius" />
       </div>
     );
   } else {

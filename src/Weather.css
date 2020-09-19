@@ -12,6 +12,7 @@
   font-size: 50px;
 }
 .WeatherTemp .units {
+
   position: relative;
   right: -60px;
   top: -60px;
@@ -28,7 +29,7 @@
 
 
 .Weather a {
-  color: black;
+  color: purple;
 }
 
 .Weather .hourlyForecast {

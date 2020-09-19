@@ -25,11 +25,13 @@ export default function WeatherInfo(props) {
         </div>
 
         <div className="col-3">
-          <WeatherTemp celsius={props.data.currentTemperature}
-          maxTemperature = {props.data.maxTemp} 
-          minTemperature = {props.data.minTemp}
-          realFeelTemp = {props.data.realFeel} />
-          
+          <WeatherTemp
+            celsius={props.data.currentTemperature}
+            maxTemperature={props.data.maxTemp}
+            minTemperature={props.data.minTemp}
+            realFeelTemp={props.data.realFeel}
+           
+          />
         </div>
 
         <div className="col-3">

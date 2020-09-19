@@ -19,14 +19,12 @@ setLoaded(true);
     if (loaded && props.city === forecast.city.name){
         return (
           <div className="HourlyForecast row">
-              
-            <HourlyForecastPreview data={forecast.list[0]} />
-            <HourlyForecastPreview data={forecast.list[1]} />
-            <HourlyForecastPreview data={forecast.list[2]} />
-            <HourlyForecastPreview data={forecast.list[3]} />
-            <HourlyForecastPreview data={forecast.list[4]} />
-            <HourlyForecastPreview data={forecast.list[5]} />
-           
+            <HourlyForecastPreview data={forecast.list[0]} unit={props.unit} />
+            <HourlyForecastPreview data={forecast.list[1]} unit={props.unit} />
+            <HourlyForecastPreview data={forecast.list[2]} unit={props.unit} />
+            <HourlyForecastPreview data={forecast.list[3]} unit={props.unit} />
+            <HourlyForecastPreview data={forecast.list[4]} unit={props.unit} />
+            <HourlyForecastPreview data={forecast.list[5]} unit={props.unit} />
           </div>
         );
         
