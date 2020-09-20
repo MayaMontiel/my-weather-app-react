@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
 import HourlyForecast from "./HourlyForecast";
+//import DailyForecast from "./DailyForecast";
 
 export default function WeatherInfo(props) {
 
@@ -49,6 +50,7 @@ export default function WeatherInfo(props) {
       </div>
       <small>Hourly</small>
       <HourlyForecast city={props.data.city} unit={unit} />
+      
     </div>
 
   
