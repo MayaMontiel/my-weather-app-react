@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
-import HourlyForecast from "./HourlyForecast";
 
 
 import axios from "axios";
@@ -11,8 +10,6 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  
-  
 
   function showData(response) {
     //console.log(response)
@@ -28,10 +25,7 @@ export default function Weather(props) {
       realFeel: Math.round(response.data.main.feels_like),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      uvIndex: 2,
-      pop: 2,
     });
-    
   }
 
   function search() {
@@ -42,14 +36,17 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
     
+    search();
     
   }
 
   function updatedCity(event) {
     event.preventDefault();
+    
     setCity(event.target.value);
+    
+    
   }
 
   function handleCurrentLocation(position) {
@@ -95,11 +92,7 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
 
-        <small>Hourly</small>
-        <br />
-        <HourlyForecast city={weatherData.city} unit="celsius" />
-
-        
+       
       </div>
     );
   } else {

@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
+import HourlyForecast from "./HourlyForecast";
 
 export default function WeatherInfo(props) {
+
+  const [unit, setUnit] = useState("celsius");
   //console.log(props.data)
   return (
     <div className="Weather">
@@ -30,6 +33,8 @@ export default function WeatherInfo(props) {
             maxTemperature={props.data.maxTemp}
             minTemperature={props.data.minTemp}
             realFeelTemp={props.data.realFeel}
+            unit = {unit}
+            setUnit = {setUnit}
            
           />
         </div>
@@ -38,11 +43,18 @@ export default function WeatherInfo(props) {
           <ul className="wind">
             <li>Wind : {props.data.wind} km/h</li>
             <li>Humidity : {props.data.humidity}%</li>
-            <li>Uv Index : {props.data.uvIndex}</li>
-            <li>PoP : {props.data.pop}%</li>
+            
           </ul>
         </div>
       </div>
+      <small>Hourly</small>
+      <HourlyForecast city={props.data.city} unit={unit} />
     </div>
+
+  
+        
+
+
+    
   );
 }
