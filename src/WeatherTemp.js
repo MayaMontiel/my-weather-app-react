@@ -34,7 +34,7 @@ export default function WeatherTemp(props) {
       <div className="WeatherTemp">
         <h1> {Math.round(props.celsius)}</h1>
         <span className="units">
-          °C |
+          °C | {" "}
           <a href="/" onClick={showFar}>
             °F{" "}
           </a>
