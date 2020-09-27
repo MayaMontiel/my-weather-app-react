@@ -2,20 +2,5 @@
     text-align: center;
 }
 
-.HourlyForecast canvas{
-    display: block;
-    margin: 10px auto;
-    
-    
-}
 
-.DailyForecast{
-    text-align: center;
-}
 
-.DailyForecast canvas{
-    display: block;
-    margin: 10px auto;
-    
-    
-}

@@ -33,8 +33,10 @@
 }
 
 .Weather .hourlyForecast {
+  
   margin-bottom: 20px;
   margin-left: 15px;
+  margin-right: auto;
 }
 
 .Weather .hourly li {
@@ -42,25 +44,12 @@
   margin: 0 50px 0 10px;
 }
 
-.Weather .dailyForecast {
-  margin-bottom: 20px;
-  margin-left: 15px;
-}
 
-.Weather .daily li {
-  text-align: center;
-  margin: 0 10px 0 -10px;
-}
-
-.Weather .daily li.unit {
-  font-size: 13px;
-  text-align: center;
-}
 
 .Weather canvas {
   margin-top: 10px;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 
 .Weather .col-3 {
