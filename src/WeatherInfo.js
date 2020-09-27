@@ -1,18 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
 import HourlyForecast from "./HourlyForecast";
 
-
 export default function WeatherInfo(props) {
-
   const [unit, setUnit] = useState("celsius");
   //console.log(props.data)
   return (
     <div className="Weather">
       <div className="row">
-        <div className="col-5">
+        <div className="WeatherName col-6">
           <ul>
             <li>
               <h1>{props.data.city}</h1>
@@ -20,6 +18,8 @@ export default function WeatherInfo(props) {
             <li>
               <FormattedDate date={props.data.date} />
             </li>
+            <li>Wind : {Math.round(props.data.wind)} km/h</li>
+            <li>Humidity : {props.data.humidity}%</li>
             <li className="text-capitalize">{props.data.description}</li>
 
             <li>
@@ -28,35 +28,24 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
 
-        <div className="col-3">
+        <div className="col-5">
           <WeatherTemp
             celsius={props.data.currentTemperature}
             maxTemperature={props.data.maxTemp}
             minTemperature={props.data.minTemp}
             realFeelTemp={props.data.realFeel}
-            unit = {unit}
-            setUnit = {setUnit}
-           
+            wind={props.data.wind}
+            humidity={props.data.humidity}
+            unit={unit}
+            setUnit={setUnit}
           />
         </div>
 
-        <div className="col-3">
-          <ul className="wind">
-            <li>Wind : {props.data.wind} km/h</li>
-            <li>Humidity : {props.data.humidity}%</li>
-            
-          </ul>
-        </div>
+
+        
       </div>
       <small>Hourly</small>
       <HourlyForecast city={props.data.city} unit={unit} />
-      
     </div>
-
-  
-        
-
-
-    
   );
 }

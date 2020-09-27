@@ -88,6 +88,7 @@ export default function Weather(props) {
             >
               <i className="fas fa-map-marked-alt"></i>
             </button>
+            
           </div>
         </form>
         <WeatherInfo data={weatherData} />

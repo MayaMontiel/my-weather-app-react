@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function WeatherTemp(props) {
-  
-
   function showFar(event) {
     event.preventDefault();
     props.setUnit("fahrenheit");
@@ -33,11 +31,12 @@ export default function WeatherTemp(props) {
     return (
       <div className="WeatherTemp">
         <h1> {Math.round(props.celsius)}</h1>
+       
         <span className="units">
-          °C | {" "}
+          °C |{" "}
           <a href="/" onClick={showFar}>
             °F{" "}
-          </a>
+          </a>          
         </span>
         <div className="maxMin">
           <span>
@@ -45,6 +44,8 @@ export default function WeatherTemp(props) {
           </span>
         </div>
         <div className="realFeel">Real Feel {props.realFeelTemp}°C</div>
+        Wind : {Math.round(props.wind)} km/h
+        Humidity : {props.humidity}%
       </div>
     );
   } else {
@@ -63,6 +64,8 @@ export default function WeatherTemp(props) {
           </span>
         </div>
         <div className="realFeel">Real Feel {Math.round(realFeel())}°F</div>
+        Wind : {Math.round(props.wind)} km/h
+        Humidity : {props.humidity}%
       </div>
     );
   }

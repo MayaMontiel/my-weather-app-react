@@ -1,8 +1,8 @@
 .App {
   display: block;
   margin: 0 auto;
-  max-width: 500px;
-  min-width: 300px;
+  max-width: 800px;
+  
 }
 
 
@@ -10,7 +10,7 @@
 .Container {
   border: 1px solid;
   border-radius: 20px;
-  padding: 25px 25px 10px 25px;
+  padding: 25px 25px 25px 25px;
   margin: 20px auto 6px auto;
   max-width: 800px;
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
