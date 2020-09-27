@@ -18,8 +18,7 @@ export default function WeatherInfo(props) {
             <li>
               <FormattedDate date={props.data.date} />
             </li>
-            <li>Wind : {Math.round(props.data.wind)} km/h</li>
-            <li>Humidity : {props.data.humidity}%</li>
+
             <li className="text-capitalize">{props.data.description}</li>
 
             <li>
@@ -40,11 +39,10 @@ export default function WeatherInfo(props) {
             setUnit={setUnit}
           />
         </div>
-
-
-        
       </div>
-      <small>Hourly</small>
+      <br />
+      <small className = "hourly">Hourly</small>
+      <br />
       <HourlyForecast city={props.data.city} unit={unit} />
     </div>
   );
