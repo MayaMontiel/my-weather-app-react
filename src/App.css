@@ -1,7 +1,7 @@
 .App {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   
 }
 
@@ -12,7 +12,7 @@
   border-radius: 20px;
   padding: 25px 25px 25px 25px;
   margin: 20px auto 6px auto;
-  max-width: 800px;
+  max-width: 600px;
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
 }
 
