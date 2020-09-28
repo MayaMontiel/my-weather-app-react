@@ -5,7 +5,7 @@
 
 .Weather ul li h1 {
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .WeatherTemp h1 {
@@ -29,14 +29,17 @@
 
 
 
-.Weather .hourlyForecast {
+.Weather .HourlyForecastPreview {
+ border: 1px solid;
   text-align: center;
-  margin: 20px 20px;
+  margin: 10px 10px;
+  padding: 0px;
 }
 
 
 
 .Weather canvas {
+  
   margin-top: 10px;
   height: 50px;
   width: 50px;
