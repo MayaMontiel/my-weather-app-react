@@ -15,6 +15,12 @@
   max-width: 600px;
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
 }
+.Container-max-widths{  
+  sm: 540px;
+  md: 720px;
+  lg: 960px;
+  xl: 1140px;
+}
 
 .Container button {
   background: transparent;

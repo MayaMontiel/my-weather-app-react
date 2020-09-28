@@ -31,25 +31,23 @@ export default function WeatherTemp(props) {
     return (
       <div className="WeatherTemp">
         <h1> {Math.round(props.celsius)}</h1>
-        
+
         <span className="units">
           °C |{" "}
           <a href="/" onClick={showFar}>
             °F{" "}
           </a>
-          
         </span>
-        
-       <div className="maxMin">
+
+        <div className="maxMin">
           <span>
             H {props.maxTemperature}°C / L {props.minTemperature}°C
           </span>
         </div>
-        
+
         <div className="realFeel">Real Feel : {props.realFeelTemp}°C</div>
         <div className="wind">Wind : {Math.round(props.wind)} km/h</div>
         <div className="humidity">Humidity : {props.humidity}%</div>
-        
       </div>
     );
   } else {
